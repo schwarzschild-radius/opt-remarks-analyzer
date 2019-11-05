@@ -1,0 +1,4 @@
+- Polybench/CPU:
+  link: http://web.cse.ohio-state.edu/~pouchet.2/software/polybench/download/polybench-c-3.2.tar.gz
+- Polybench/GPU:
+  link: http://www.cse.ohio-state.edu/~pouchet/software/polybench/download/polybench-gpu-1.0.tar.gz
