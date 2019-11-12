@@ -1,2 +1,11 @@
 # data dir
 data/
+
+# experiments dir
+experiments/
+
+# vscode dir
+.vscode/
+
+# pycache dir
+__pycache__/
