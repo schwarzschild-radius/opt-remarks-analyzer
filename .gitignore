@@ -9,3 +9,4 @@ experiments/
 
 # pycache dir
 __pycache__/
+*.pyc
