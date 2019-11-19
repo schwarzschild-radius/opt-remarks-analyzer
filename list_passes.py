@@ -59,3 +59,7 @@ if __name__ == "__main__":
     f = open(filename).read()
     passes = list_passes(optYaml2Json(f))
     pprint(passes)
+    percent = 0.0
+    for key in passes:
+        percent += passes[key]['percentage']
+    print(percent)
