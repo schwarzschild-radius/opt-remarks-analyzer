@@ -42,6 +42,8 @@ def list_passes(opt_json):
         if opt_pass["status"] == "Analysis":
             data_pass = emplace_back_int("times", 1, data_pass)
         elif opt_pass["status"] in ["Passed", "Missed"]:
+            data_pass['passed'] = 0
+            data_pass['missed'] = 0
             data_pass = emplace_back_int(opt_pass["status"].lower(), 1, data_pass)
     for key in data:
         data[key]["percentage"] /= npasses / 100
