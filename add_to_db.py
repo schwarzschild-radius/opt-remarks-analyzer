@@ -8,7 +8,11 @@ from yaml2json import optYaml2Json
 def add_to_db(db, yaml_string):
     json_string = optYaml2Json(yaml_string)
     for each_pass in json_string:
-        db.analysis_results.insert_one(each_pass)
+        db.Test_Polybench_report.insert_one(each_pass)
+
+def list_passes_from_db(db):
+    cursor = db.Test_Polybench_report.find({"$all" : ['Pass']})
+    return cursor
 
 if __name__ == "__main__":
     import argparse
@@ -27,3 +31,4 @@ if __name__ == "__main__":
     server_status_result = db.command('serverStatus')
     pprint(server_status_result)
     add_to_db(db, g)
+    cursor = list_passes_from_db(db)
