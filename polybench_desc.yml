@@ -1,0 +1,7 @@
+Polybench:
+  dir: "./data/Polybench"
+  type: 
+    - "linear algebra"
+    - "data mining"
+    - "medley"
+    - "stencils"
